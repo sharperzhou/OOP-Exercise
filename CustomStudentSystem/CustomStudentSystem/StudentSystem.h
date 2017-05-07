@@ -12,27 +12,33 @@ struct Student
     string Grade;     //年级
 };
 
-enum ErrorHandler
+enum RESULT
 {
-    ERROR_SUCCESSFUL = 0,  //无错误
-    ERROR_OPENFILE,        //打开文件失败
-    ERROR_STUDENTEXIST     //增加的学生Id重复
+    ERROR_SUCCESSFUL = 0x00000001,      //无错误
+    ERROR_OPENFILE = 0x00000010,        //打开文件失败
+    ERROR_STUDENTEXIST = 0x00000100,    //增加的学生Id重复
+    ERROR_NOFINDRESULT = 0x00001000     //未查找到指定Id的学生
 };
 
 class CStudentSystem
 {
 public:
-    CStudentSystem() {};
+    CStudentSystem() { /*Student stu = {5001, 28, "zzzxx", "男", "石板"}; writeFile(stu);*/};
     ~CStudentSystem() {};
     
 public:
     void mainPage();
-    int insert(const Student& stu);
-    int display();
+    void display();
+    RESULT read();
+    RESULT insert(const Student& stu);
+    RESULT find(int Id);
+    RESULT update(const Student& stu);
+    RESULT remove(int Id);
 
 private:
     bool readFile();
     bool writeFile(const Student& stu);
+    bool writeFile();
     void displayHead();
 
 private:
