@@ -71,8 +71,10 @@ RESULT CStudentSystem::insert(const Student &stu)
             if (stu.Id == ((Student) *iter).Id)
                 return ERROR_STUDENTEXIST;
     }
-
-    if (!writeFile(stu)) return ERROR_OPENFILE;
+    
+    m_stuInfo.clear();
+    m_stuInfo.push_back(stu);
+    if (!writeFile(true)) return ERROR_OPENFILE;
 
     return ERROR_SUCCESSFUL;
 }
@@ -174,39 +176,16 @@ bool CStudentSystem::readFile()
 
 /*****************************************************************************************\
 * FuncName :   writeFile
-* Usage    :   write the student information from console, which the user input, to file
+* Usage    :   write student information from vector to file
 * DataTime :   2017/05/07
 * Access   :   private 
 * Return   :   bool
-* Params   :   const Student & stu
+* Params   :   bool isAppend
 \*****************************************************************************************/
-bool CStudentSystem::writeFile(const Student& stu)
+bool CStudentSystem::writeFile(bool isAppend)
 {
-    ofstream ofs("stu_info.dat", ios::app | ios::binary);
-    if (!ofs.is_open()) return false;
-
-    //ofs << stu.Id << "\t"
-    //    << stu.Name << "\t"
-    //    << stu.Sex << "\t"
-    //    << stu.Age << "\t"
-    //    << stu.Grade << "\r"
-    //    << endl;
-
-    ofs.write((char*) &stu, sizeof(Student));
-
-    return true;
-}
-
-/*****************************************************************************************\
-* FuncName :   writeFile
-* Usage    :   write student information from vector
-* DataTime :   2017/05/07
-* Access   :   private 
-* Return   :   bool
-\*****************************************************************************************/
-bool CStudentSystem::writeFile()
-{
-    ofstream ofs("stu_info.dat", ios::binary);
+    int mode = isAppend ? ios::app | ios::binary : ios::binary;
+    ofstream ofs("stu_info.dat", mode);
     if (!ofs.is_open()) return false;
 
     for (vector<Student>::const_iterator iter = m_stuInfo.begin();

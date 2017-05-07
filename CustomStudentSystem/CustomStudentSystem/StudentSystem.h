@@ -37,8 +37,7 @@ public:
 
 private:
     bool readFile();
-    bool writeFile(const Student& stu);
-    bool writeFile();
+    bool writeFile(bool isAppend = false);
     void displayHead();
 
 private:
