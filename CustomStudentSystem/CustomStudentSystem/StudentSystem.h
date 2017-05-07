@@ -23,7 +23,7 @@ enum RESULT
 class CStudentSystem
 {
 public:
-    CStudentSystem() { /*Student stu = {5001, 28, "zzzxx", "ÄÐ", "Ê¯°å"}; writeFile(stu);*/};
+    CStudentSystem() {};
     ~CStudentSystem() {};
     
 public:
