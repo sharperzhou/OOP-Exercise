@@ -1,0 +1,314 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ShoppingSystem.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ShoppingSystem.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 502, 289
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "商超购物管理系统"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+END
+
+IDD_SIDEBAR DIALOGEX 0, 0, 119, 307
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "商品维护",SB_BTN_SPWH,4,13,108,14,NOT WS_TABSTOP
+    CONTROL         "",SB_TREE_MENU,"SysTreeView32",WS_BORDER,6,29,103,221
+    PUSHBUTTON      "前台收银",SB_BTN_QTSY,6,267,108,14,NOT WS_TABSTOP
+    PUSHBUTTON      "商品管理",SB_BTN_SPGL,6,286,108,14,NOT WS_TABSTOP
+END
+
+IDD_LOGIN DIALOGEX 0, 0, 200, 128
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "系统登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "登录",IDOK,83,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,107,50,14
+    LTEXT           "用户名：",IDC_STATIC,35,54,38,8
+    LTEXT           "密    码：",IDC_STATIC,35,73,38,8
+    EDITTEXT        LGIN_EDT_USERNAME,73,51,91,14,ES_AUTOHSCROLL
+    EDITTEXT        LGIN_EDT_PWD,73,71,91,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         131,LGIN_BITMAP_LOGO,"Static",SS_BITMAP,0,0,200,43
+    CTEXT           "",LGIN_STATIC_TIPS,9,90,183,8
+    COMBOBOX        LGIN_COMB_ROLE,21,107,45,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_QUERY DIALOGEX 0, 0, 417, 261
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "",QUERY_LV_VIEW,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,8,8,376,212
+    LTEXT           "XX名称：",QUERY_STATIC_QUERYNAME,8,233,45,8
+    EDITTEXT        QUERY_EDT_QUERY,46,230,75,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "查询",QUERY_BTN_QUERY,123,230,50,14
+    PUSHBUTTON      "增加",QUERY_BTN_ADD,188,230,50,14
+    PUSHBUTTON      "修改",QUERY_BTN_UPDATE,251,230,50,14
+    PUSHBUTTON      "删除",QUERY_BTN_DELETE,315,230,50,14
+END
+
+IDD_ADD_MODIFY DIALOGEX 0, 0, 142, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "XXXX"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "XX信息",AM_GROUP,7,7,128,84
+    LTEXT           "ID：",AM_STATIC_1,15,22,23,8
+    LTEXT           "ID：",AM_STATIC_2,15,39,23,8
+    LTEXT           "ID：",AM_STATIC_3,15,55,23,8
+    LTEXT           "ID：",AM_STATIC_4,15,71,23,8
+    EDITTEXT        AM_EDT_1,41,20,86,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_CLIENTEDGE
+    EDITTEXT        AM_EDT_2,41,36,86,14,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    EDITTEXT        AM_EDT_3,41,52,86,14,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    EDITTEXT        AM_EDT_4,41,68,86,14,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "确定",IDOK,15,97,50,14
+    PUSHBUTTON      "取消",IDCANCEL,77,97,50,14
+END
+
+IDD_DAILYGSALES DIALOGEX 0, 0, 185, 122
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "",DGS_LISTVIEW,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,0,164,92
+END
+
+IDD_CASHIER DIALOGEX 0, 0, 356, 250
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "商品列表",CASHIER_GRP_GOODS,4,0,339,120
+    CONTROL         "",CASHIER_LV_GOODS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,11,323,81
+    LTEXT           "商品名称：",CASHIER_STATIC_NAME,14,100,41,8
+    EDITTEXT        CASHIER_EDT_NAME,57,96,51,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "查询",CASHIER_BTN_QUERY,119,95,50,14
+    LTEXT           "数量：",CASHIER_STATIC_QUANTITY,212,98,25,8
+    EDITTEXT        CASHIER_EDT_QUANTITY,237,96,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",CASHIER_SPIN_QUANTITY,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS,269,95,11,14
+    PUSHBUTTON      "购买",CASHIER_BTN_PURCHASE,284,94,50,14
+    GROUPBOX        "购物车",CASHIER_GRP_CART,6,122,336,116
+    CONTROL         "",CASHIER_LV_CART,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,136,320,76
+    LTEXT           "应收：",CASHIER_STATIC_AMOUNT,17,217,68,9
+    LTEXT           "实收：",CASHIER_STATIC_PAID,81,217,25,8
+    EDITTEXT        CASHIER_EDT_PAID,105,215,40,14,ES_AUTOHSCROLL
+    LTEXT           "找零：",CASHIER_STATIC_CHARGE,166,217,25,8
+    PUSHBUTTON      "取消",CASHIER_BTN_CANCEL,229,213,50,14
+    PUSHBUTTON      "结算",CASHIER_BTN_CASH,285,213,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ShoppingSystem.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "ShoppingSystem.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 495
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 282
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        VERTGUIDE, 35
+        VERTGUIDE, 73
+        VERTGUIDE, 164
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_QUERY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 384
+        VERTGUIDE, 8
+        HORZGUIDE, 8
+        HORZGUIDE, 230
+    END
+
+    IDD_ADD_MODIFY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        VERTGUIDE, 15
+        VERTGUIDE, 38
+        VERTGUIDE, 41
+        VERTGUIDE, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_DAILYGSALES, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_CASHIER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 185
+        BOTTOMMARGIN, 93
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LOGIN DLGINIT
+BEGIN
+    LGIN_COMB_ROLE, 0x403, 7, 0
+0xdbca, 0xf5bb, 0xb1d4, "\000" 
+    LGIN_COMB_ROLE, 0x403, 7, 0
+0xdcb9, 0xedc0, 0xb1d4, "\000" 
+    0
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ShoppingSystem.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
