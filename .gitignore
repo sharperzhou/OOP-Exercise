@@ -9,3 +9,14 @@
 *.idb
 *.htm
 *.aps
+*.pch
+*.tlh
+*.tli
+*.lib
+*.exp
+ShoppingSystem2/debug/Application.exe
+ShoppingSystem2/debug/BLL.dll
+ShoppingSystem2/debug/Tools.dll
+ShoppingSystem2/debug/UIL.dll
+ShoppingSystem2/debug/DAL.dll
+ShoppingSystem2/debug/Entity.dll
